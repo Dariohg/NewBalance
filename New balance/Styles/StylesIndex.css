@@ -1,0 +1,281 @@
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px; 
+  }
+  
+  .btnLogin{
+    background-color: white ;
+    border: none;
+  }
+
+  
+
+/*abajo es el css de la imagen principal*/
+
+.container-img {
+
+    position: relative; 
+    text-align: center
+  }
+  
+  .imagenPrincipal {
+    width: 80%;
+  }
+  
+  .botonImgPrincipal {
+    position: absolute; 
+    top: 90%; 
+    left: 80%; 
+    background-color: rgba(236, 13, 13, 0.7); 
+    color: white; 
+    padding: 10px 20px;
+    border: none; 
+    cursor: pointer; 
+  }
+
+  /*css de slider*/
+
+ .imgSiler{
+  text-align: center;
+  align-items: center;
+  height: 600px;
+  width: auto;
+ }
+
+ .carousel-inner{
+  text-align: center;
+ }
+
+ .titulo2{
+  text-align: center;
+ }
+
+.mi-boton {
+  border: 2px solid red; 
+  background-color: white; 
+  color: red; 
+  padding: 10px 20px; 
+  font-size: 16px; 
+  cursor: pointer; 
+}
+
+
+/*captura*/
+
+.captura{
+  text-align: center;
+  max-width: 100%;
+}
+
+/*ooter*/
+
+
+
+.footer {
+  background-color: black;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.subscribe-text {
+  display: inline-block;
+  width: 45%;
+  text-align: left;
+}
+
+.subscribe-input {
+  width: 45%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+.subscribe-button {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* responsivo */
+@media (max-width: 768px) {
+  .subscribe-text,
+  .subscribe-input,
+  .subscribe-button {
+      width: 100%;
+      display: block;
+      text-align: center;
+  }
+}
+
+.foo{
+    max-width: 100%;
+}
+
+
+
+/*api*/
+
+.loMasVendido {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; 
+}
+
+#unsplash-image-src {
+  width: 100%;
+  height: 500px;
+}
+
+.slider-container {
+  text-align: center;
+}
+
+/* Modal*/
+.modal {
+    display: none; /* Por defecto, estará oculto */
+    position: fixed; /* Posición fija */
+    z-index: 1; /* Se situará por encima de otros elementos de la página*/
+    padding-top: 200px; /* El contenido estará situado a 200px de la parte superior */
+    left: 0;
+    top: 0;
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Algura completa */
+    overflow: auto; /* Se activará el scroll si es necesario */
+    background-color: rgba(0,0,0,0.5); /* Color negro con opacidad del 50% */
+}
+
+/* Ventana o caja modal */
+.contenido-modal {
+    position: relative; /* Relativo con respecto al contenedor -modal- */
+    background-color: white;
+    margin: auto; /* Centrada */
+    padding: 20px;
+    width: 60%;
+    -webkit-animation-name: animarsuperior;
+    -webkit-animation-duration: 0.5s;
+    animation-name: animarsuperior;
+    animation-duration: 0.5s
+}
+
+/* Animación */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+@keyframes animarsuperior {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+/* Botón cerrar */
+.close {
+    color: black;
+    float: right;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+/* Acordeon*/
+.acordeon{
+    position: relative;
+    left: 545px;
+    max-width: 50%;
+}
+.acordeon_item{
+    width: 300px;
+    padding: 0;
+    list-style: none;
+    background-color: aquamarine;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+.acordeon_name{
+    padding: 1em;
+    cursor: pointer;
+
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.acordeon-contenido{
+    overflow: hidden;
+    padding: 0 2em;
+    line-height: 2;
+    height: 0;
+    transition: .3s height;
+}
+
+.acordeon-contenido::before, .acordeon-contenido::after{
+    content: " ";
+    display: block;
+    height: 20px;
+    background-color: transparent;
+}
+
+/*  boton */
+
+.botones .boton{
+    position: relative;
+    display: inline-block;
+    left: 545px;
+    max-width: 50%;
+    color: #fff;
+    padding: 14px 40px;
+    background: linear-gradient(90deg,#6616d0,#ac34e7);
+    border-radius: 45px;
+    margin: 0 15px;
+    font-size: 30px;
+    font-weight: 400;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+.botones .boton.two{
+    background: linear-gradient(90deg, #025ce3,#4e94fd);
+}
+
+.botones .boton .overlay{
+    position: absolute;
+    height: 400px;
+    width: 400px;
+    background: #fff;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    animation: blink 0.5s linear infinite;
+}
+
+@keyframes blink {
+    0%{
+        height: 0px;
+        width: 0px;
+        opacity: 0.5;
+    }
+    100%{
+        height: 400px;
+        width: 400px;
+        opacity: 0;
+    }
+}
+
